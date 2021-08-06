@@ -16,5 +16,4 @@ export async function signIn (userId: number, token: string) {
 export async function findEmail(email:string) {
   const emailExists = await getRepository(User).findOne({email})
   return emailExists;
-  
 }

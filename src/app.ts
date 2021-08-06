@@ -9,7 +9,7 @@ import connectDatabase from "./database";
 import Pokemon from "./entities/Pokemons";
 import * as userController from "./controllers/userConroller";
 import * as pokemonController from "./controllers/pokemonsController";
-import * as middleware from "./middlewares/authmiddleware"
+import * as middleware from "./middlewares/authmiddleware";
 import {Request, Response, NextFunction, Errback} from 'express';
 
 

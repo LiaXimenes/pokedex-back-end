@@ -51,7 +51,7 @@ export async function signIn (req: Request, res: Response) {
     const getUserByEmail = await userService.findEmail(email);
 
     const userId = Number(getUserByEmail.id)
-    const token = uuid();
+    const token: string = uuid();
     if(getUserByEmail && bcrypt.compareSync(password, getUserByEmail.password)){
       await userService.signIn(userId, token);
     }else{
