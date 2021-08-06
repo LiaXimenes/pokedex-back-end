@@ -49,15 +49,14 @@ export async function signIn (req: Request, res: Response) {
 
     if(validation.error) return res.sendStatus(400);
 
-    //if(senha e email nao baterem) return res.sendStatus(401);
-
     const getUserByEmail = await userService.findEmail(email);
-    console.log(getUserByEmail)
 
     const userId = Number(getUserByEmail.id)
     const token = uuid();
     if(getUserByEmail && bcrypt.compareSync(password, getUserByEmail.password)){
       await userService.signIn(userId, token);
+    }else{
+      return res.sendStatus(401)
     }
     
     res.send(token);
