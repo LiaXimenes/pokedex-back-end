@@ -3,7 +3,6 @@ import Joi from "joi";
 import { v4 as uuid } from 'uuid';
 import bcrypt from 'bcrypt';
 
-
 import * as userService from "../services/userService";
 
 export async function signUp (req: Request, res: Response) {

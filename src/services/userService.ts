@@ -5,7 +5,6 @@ import Session from "../entities/Sessions"
 
 export async function signUp (email: string, password: string) {
   const users = await getRepository(User).insert({email, password});
-  
   return users;
 }
 
