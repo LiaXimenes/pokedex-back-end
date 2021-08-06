@@ -24,7 +24,7 @@ app.use("/populate", async (req: Request,res: Response)=>{
     const newPokemon = {
       id: result.data.id,
       name: result.data.name,
-      number: result.data.order,
+      number: result.data.id,
       image: result.data.sprites.front_default,
       weight: result.data.weight,
       height: result.data.height,

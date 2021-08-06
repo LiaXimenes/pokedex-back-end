@@ -8,11 +8,11 @@ beforeAll(async () => {
   await init();
 });
 
-// beforeEach(async () => {
-//   //await clearDatabase();
+beforeEach(async () => {
+  await clearDatabase();
 
-//   //await populateSession();
-// });
+  await populateSession();
+});
 
 afterAll(async () => {
   await getConnection().close();

@@ -8,25 +8,25 @@ beforeAll(async () => {
   await init();
 });
 
-// beforeEach(async () => {
-//   await clearDatabase();
-// });
+beforeEach(async () => {
+  await clearDatabase();
+});
 
 afterAll(async () => {
   await getConnection().close();
 });
 
 describe("POST /sign-up", () => {
-  // it("should answer status 201", async () => {
-  //   const email: string = "test@test.com";
-  //   const password: string = "12345";
-  //   const confirmPassword: string = "12345"
+  it("should answer status 201", async () => {
+    const email: string = "test@test.com";
+    const password: string = "12345";
+    const confirmPassword: string = "12345"
 
-  //   const body = {email, password, confirmPassword} 
+    const body = {email, password, confirmPassword} 
 
-  //   const response = await supertest(app).post("/sign-up").send(body);
-  //   expect(response.status).toBe(201);
-  // });
+    const response = await supertest(app).post("/sign-up").send(body);
+    expect(response.status).toBe(201);
+  });
 
   it("should answer status 409 if email already registered", async () => {
     const email: string = "test@test.com";

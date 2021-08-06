@@ -3,7 +3,9 @@ import * as pokemonsService from "../services/pokemonsService";
 
 export async function getPokemons(req: Request, res: Response){
     try{
-        const pokemons = await pokemonsService.getPokemons();
+        const userId = Number(res.locals.id)
+
+        const pokemons = await pokemonsService.getPokemons(userId);
         res.send(pokemons)
     } catch(err){
         console.log(err)
