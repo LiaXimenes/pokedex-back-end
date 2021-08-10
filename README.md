@@ -4,7 +4,7 @@ You can try it here: https://pokedex-rho-seven.vercel.app/
 
 
 ## About
-This is an web application which shows all known, or almost all of them until today and you can add/remove them from your list.
+This is an web application which shows all pokemons known, or almost all of them, until today and you can add/remove them from your list.
 Below are the implemented features:
 
 * Sign-up
@@ -17,6 +17,7 @@ Below are the implemented features:
 The following tools and frameworks were used in the construction of the project:
 
 * Node.js
+* Express
 * PostgreSQL
 * Typescrypit
 * Jest
