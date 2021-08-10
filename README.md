@@ -40,9 +40,6 @@ npm run typeorm migration:run
 ```bash
 npm run dev
 ```
-8. You can optionally build the project running
-```bash
-npm run build
-```
+
 
 
